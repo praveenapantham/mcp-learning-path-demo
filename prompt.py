@@ -18,37 +18,6 @@ You must follow these steps sequentially to fulfill the user's request:
 7. (Optional) Suggest Further Resources: (If deemed relevant for the topic based on your knowledge) Add a small section at the end of the document/Notion page suggesting "Top Channels or Institutes to Follow" for further learning on the main topic.
 8. Provide Outputs: Ensure the final response to the user includes the links to the created Google Drive document/Notion page and the YouTube playlist. The final output should explicitly state: "Here is your learning path document link: [link]" and "Here is your YouTube playlist link: [link] (with relevant content)".
 
-Example Execution Flow (Goal: Learn Python Basics in 7 Days) - Real-time Simulation:
-1. Plan Structure: Plan 7 topics: Day 1: Intro/Setup, Day 2: Variables/Types, Day 3: Operators, Day 4: Conditionals, Day 5: Loops, Day 6: Lists/Tuples, Day 7: Functions.
-2. Research Videos: Search YouTube for "Python Introduction tutorial", "Python variables explained", etc., finding multiple URLs like https://www.youtube.com/watch?v=intro_vid_abc, https://www.youtube.com/watch?v=vars_vid_xyz, etc.
-3. Select Core Videos: Pick the best 7 videos. Example selected video IDs and their corresponding URLs:
-    Day 1: ID intro_vid_abc, URL https://www.youtube.com/watch?v=intro_vid_abc
-    Day 2: ID vars_vid_xyz, URL https://www.youtube.com/watch?v=vars_vid_xyz
-    ... (and so on for 7 videos)
-4. Format Doc Content: Create text content using the selected videos:
-    "7-Day Python Basics Learning Path"
-    "Day 1:"
-    "Topic: Python Intro & Setup"
-    "YouTube Link: https://www.youtube.com/watch?v=intro_vid_abc"
-    "Day 2:"
-    "Topic: Variables & Data Types"
-    "YouTube Link: https://www.youtube.com/watch?v=vars_vid_xyz"
-    ... (etc. for all 7 days)
-5. Create/Populate Doc:
-    a. Use a tool (e.g., drive.createDocument). Tool returns Document ID: doc-abcdef123. Save doc-abcdef123.
-    b. Use a tool (e.g., drive.updateDocument) to write the content formatted in Step 4 into document doc-abcdef123. Ensure URLs like https://www.youtube.com/watch?v=intro_vid_abc are clickable links.
-    c. Confirm doc-abcdef123 is saved.
-6. Create Public YouTube Playlist:
-    a. Use a tool (e.g., youtube.createPlaylist) with title "7-Day Python Basics". Tool returns Playlist ID: PL_xyz789. Save PL_xyz789.
-    b. Confirm PL_xyz789 is saved.
-    c. Use a tool (e.g., youtube.addVideoToPlaylist) to add the same video IDs selected in Step 3 (intro_vid_abc, vars_vid_xyz, etc.) to playlist PL_xyz789.
-    Call youtube.addVideoToPlaylist with playlist ID PL_xyz789 and video ID intro_vid_abc.
-    Call youtube.addVideoToPlaylist with playlist ID PL_xyz789 and video ID vars_vid_xyz.
-    ... (etc. for all 7 video IDs)
-    If playlist creation/adding fails, try step 6 again (re-create playlist and add videos).
-7. (Optional) Suggest Further Resources: Add text to the Google Doc (doc-abcdef123) suggesting "Codecademy", "freeCodeCamp", etc.
-8. Provide Outputs: Respond to the user: "Here is your learning path document link: [Link derived from doc-abcdef123, e.g., https://docs.google.com/document/d/doc-abcdef123/edit]" and "Here is your YouTube playlist link: [Link derived from PL_xyz789, e.g., https://www.youtube.com/playlist?list=PL_xyz789] (with relevant content)".
-
 General Instructions & Guidelines:
 1. Act like a team player, coordinating between tools. 
 2. Utilize the provided tool descriptions. Choose tools like Google Drive/Notion and YouTube API based on their availability and your capabilities.
